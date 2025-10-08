@@ -26,7 +26,8 @@ const Shorten = () => {
         fetch("/api/generate", requestOptions)
             .then((response) => response.json())
             .then((result) => {
-                setGenerated(`${process.env.NEXT_PUBLIC_HOST}/${shorturl}`)
+                const origin = typeof window !== "undefined" && window.location?.origin ? window.location.origin : (process.env.NEXT_PUBLIC_HOST || "")
+                setGenerated(shorturl ? `${origin}/${shorturl}` : "")
                 seturl("")   
                 setshorturl("")
                 console.log(result)
