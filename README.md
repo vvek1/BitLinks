@@ -25,42 +25,107 @@ A modern and simple **URL Shortener** built with ❤️ for developers and users
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** Node.js / Express (or jo tum use kar rahe ho)  
+- **Frontend:** Next.js, HTML, CSS, JavaScript  
+- **Backend:** Node.js / Next.js (or jo tum use kar rahe ho)  
 - **Database:** MongoDB (if applicable)  
 
 ---
 
 ## 🚀 Getting Started
 
-### 1️⃣ Clone the repo
-```Terminal
+### Prerequisites
+- Node.js 18+ installed
+- MongoDB database (local or cloud)
+
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/vvek1/BitLinks.git
 cd BitLinks
 ```
-```###2️⃣ Install dependencies
+
+### 2️⃣ Install dependencies
+```bash
 npm install
 ```
-```### 3️⃣ Run the project
-npm start
-```
-### Now open 👉 http://localhost:3000
 
-📸 Screenshots
+### 3️⃣ Environment Setup
+Create a `.env.local` file in the root directory:
+```env
+# MongoDB connection string
+MONGODB_URI=mongodb://localhost:27017/bitlinks
+
+# Optional: Set your domain for production
+NEXT_PUBLIC_HOST=http://localhost:3000
+```
+
+### 4️⃣ Start MongoDB
+Make sure MongoDB is running on your system:
+```bash
+# If using local MongoDB
+mongod
+
+# Or use MongoDB Atlas (cloud) and update MONGODB_URI in .env.local
+```
+
+### 5️⃣ Run the development server
+```bash
+npm run dev
+```
+
+### 6️⃣ Open your browser
+Visit 👉 **http://localhost:3000**
+
+---
+
+## 📁 Project Structure
+```
+BitLinks/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   │   └── generate/       # URL generation endpoint
+│   ├── [shorturl]/        # Dynamic route for short URLs
+│   ├── about/              # About page
+│   ├── contact/            # Contact page
+│   ├── shorten/            # URL shortening page
+│   └── page.js             # Home page
+├── components/             # React components
+│   └── Navbar.js           # Navigation component
+├── lib/                    # Utility functions
+│   └── mongodb.js          # MongoDB connection
+└── public/                 # Static assets
+```
+
+---
+
+## 🔧 Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+---
+
+## 📸 Screenshots
 (Add screenshots here)
 
-🤝 Contributing
+---
+
+## 🤝 Contributing
 Contributions are always welcome!
-Fork the repo
-Create a new branch (git checkout -b feature-xyz)
-Commit your changes (git commit -m 'Add new feature')
-Push to branch (git push origin feature-xyz)
-Open a Pull Request 🎉
 
-📜 License
+1. Fork the repo
+2. Create a new branch (`git checkout -b feature-xyz`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to branch (`git push origin feature-xyz`)
+5. Open a Pull Request 🎉
+
+---
+
+## 📜 License
 This project is licensed under the MIT License.
-See the LICENSE
- file for details.
+See the [LICENSE](LICENSE) file for details.
 
-🙌 Author
-Made with ❤️ by Vivek
+---
+
+## 🙌 Author
+Made with ❤️ by [Vivek](https://github.com/vvek1)
