@@ -48,7 +48,12 @@ cd BitLinks
 npm install
 ```
 
-### 3️⃣ Environment Setup
+### 3️⃣ Create a Next.js
+```bash
+npx create-next-app@latest
+```
+
+### 4️⃣ Environment Setup
 Create a `.env.local` file in the root directory:
 ```env
 # MongoDB connection string
@@ -58,7 +63,7 @@ MONGODB_URI=mongodb://localhost:27017/bitlinks
 NEXT_PUBLIC_HOST=http://localhost:3000
 ```
 
-### 4️⃣ Start MongoDB
+### 5️⃣ Start MongoDB
 Make sure MongoDB is running on your system:
 ```bash
 # If using local MongoDB
@@ -67,12 +72,12 @@ mongod
 # Or use MongoDB Atlas (cloud) and update MONGODB_URI in .env.local
 ```
 
-### 5️⃣ Run the development server
+### 6️⃣ Run the development server
 ```bash
 npm run dev
 ```
 
-### 6️⃣ Open your browser
+###  Open your browser
 Visit 👉 **http://localhost:3000**
 
 ---
