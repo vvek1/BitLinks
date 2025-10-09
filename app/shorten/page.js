@@ -26,15 +26,19 @@ const Shorten = () => {
         fetch("/api/generate", requestOptions)
             .then((response) => response.json())
             .then((result) => {
-                const origin = typeof window !== "undefined" && window.location?.origin ? window.location.origin : (process.env.NEXT_PUBLIC_HOST || "")
-                setGenerated(shorturl ? `${origin}/${shorturl}` : "")
-                seturl("")   
-                setshorturl("")
+                if (result.success) {
+                    const origin = typeof window !== "undefined" && window.location?.origin ? window.location.origin : (process.env.NEXT_PUBLIC_HOST || "")
+                    setGenerated(shorturl ? `${origin}/${shorturl}` : "")
+                    seturl("")   
+                    setshorturl("")
+                }
                 console.log(result)
                 alert(result.message)
-            
             })
-            .catch((error) => console.error(error));
+            .catch((error) => {
+                console.error(error)
+                alert("An error occurred. Please try again.")
+            });
     }
 
 

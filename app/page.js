@@ -19,15 +19,15 @@ export default function Home() {
             The best URL shortener in the Market
           </p>
           <p className="px-56 text-center">
-            We are the most straightfoward URL Shortener in the world. Most of the url shorteners will track you or ask you to give your details for login. We understand your needs and hence we have created this URL shortener
+            We are the most straightforward URL Shortener in the world. Most of the url shorteners will track you or ask you to give your details for login. We understand your needs and hence we have created this URL shortener
           </p>
           <div className='flex gap-3 justify-start'>
           <Link href="/shorten"><button className='bg-pink-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white'>Try Now</button></Link>
           <Link href="/github"><button className='bg-pink-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white'>GitHub</button></Link>
         </div>
         </div>
-        <div className=" flex justify-start relative">
-          <Image className="mix-blend-darken" alt="an Image of a vector" src={"/vector.jpg"} fill={true}    />
+        <div className="flex justify-start relative h-full">
+          <Image className="mix-blend-darken object-cover" alt="an Image of a vector" src={"/vector.jpg"} fill={true} />
         </div>
 
       </section>

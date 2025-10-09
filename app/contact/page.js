@@ -4,10 +4,10 @@ export default function Contact() {
       <section className="max-w-3xl mx-auto py-16 px-6 flex flex-col gap-6">
         <h1 className="text-3xl font-bold">Contact</h1>
         <p>
-          Have feedback or found an issue? Reach out and we’ll get back soon.
+          Have feedback or found an issue? Reach out and we'll get back soon.
         </p>
         <div className="grid gap-3">
-          <a className="underline" href="mailto:hello@example.com">hello@example.com</a>
+          <a className="underline" href="mailto:contact@bitlinks.com">contact@bitlinks.com</a>
           <a className="underline" href="/github" target="_blank" rel="noreferrer">GitHub</a>
         </div>
         <div className="flex gap-3">
