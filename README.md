@@ -63,21 +63,12 @@ MONGODB_URI=mongodb://localhost:27017/bitlinks
 NEXT_PUBLIC_HOST=http://localhost:3000
 ```
 
-### 5️⃣ Start MongoDB
-Make sure MongoDB is running on your system:
-```bash
-# If using local MongoDB
-mongod
-
-# Or use MongoDB Atlas (cloud) and update MONGODB_URI in .env.local
-```
-
-### 6️⃣ Run the development server
+### 5️⃣ Run the development server
 ```bash
 npm run dev
 ```
 
-###  Open your browser
+### 6️⃣ Open your browser
 Visit 👉 **http://localhost:3000**
 
 ---
